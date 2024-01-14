@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss/tailwind";
+
+html,
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0%;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: bold;
+    letter-spacing: -0.6%;
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0%;
+}
+
+h5 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    font-weight: 400;
+}
+
+.p-bold {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.button-text {
+    font-size: 16px;
+    letter-spacing: 0%;
+    font-weight: bold;
+    line-height: 24px;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container1 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container2 {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-right: 20px;
+}
+.drawer ::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+.modal-scroll::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.home-main-btn::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.015, 1.12);
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(
+        90deg,
+        rgba(114, 102, 252, 0.4) 0%,
+        rgba(255, 5, 185, 0.4) 63.59%,
+        rgba(255, 8, 67, 0.4) 100%
+    );
+    filter: blur(15px);
+    z-index: -1;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.home-main-btn:hover::after {
+    visibility: visible;
+}
+
+/* custom checkbox */
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    appearance: none;
+    border: 1px solid #b8c0cc;
+    border-radius: 2px;
+    background: #fff;
+    position: relative;
+    margin-right: 9px;
+}
+
+input[type="checkbox"]:checked {
+    border: 1px solid #7266fc;
+    background: #7266fc;
+}
+
+input[type="checkbox"]:checked:before,
+input[type="checkbox"]:checked:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #fff;
+}
+
+input[type="checkbox"]:checked:before {
+    width: 7px;
+    top: 8px;
+    left: 1px;
+    transform: rotate(40deg);
+}
+
+input[type="checkbox"]:checked:after {
+    width: 10px;
+    top: 6px;
+    left: 4px;
+    transform: rotate(-55deg);
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+}
